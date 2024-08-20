@@ -9,7 +9,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - API_KEY=YOUR_SUPER_SECURE_AUTHENTICATION_KEY
+      - API_KEY=api_key_loja_tn_novidades
     volumes:
       - evolution_store:/evolution/store
       - evolution_instances:/evolution/instances
