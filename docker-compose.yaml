@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  evolution-api:
+    image: atendai/evolution-api
+    command: ["node", "./dist/src/main.js"]
+    container_name: evolution_api
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - API_KEY=YOUR_SUPER_SECURE_AUTHENTICATION_KEY
+    volumes:
+      - evolution_store:/evolution/store
+      - evolution_instances:/evolution/instances
+
+volumes:
+  evolution_store:
+  evolution_instances:
